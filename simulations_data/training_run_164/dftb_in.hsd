@@ -1,0 +1,44 @@
+Geometry = xyzFormat {
+  <<< "H2Converged.xyz"
+}
+
+
+Hamiltonian = DFTB {
+  Scc = Yes
+  SCCTolerance = 1.0e-7
+  MaxSCCIterations = 200
+
+
+  SlaterKosterFiles {
+    H-H = "/Users/ayushsharma/Documents/Spring 2024/Lab Research/zrun_1/H-H.skf"
+          
+  }
+  MaxAngularMomentum {
+	H = "s"
+  }
+}
+
+ElectronDynamics = {
+    Steps = 30000
+    TimeStep [au] = 0.1
+    Perturbation = Laser {
+        LaserEnergy [eV] = 5.713811888711456
+		PolarizationDirection = 1 0 0
+		ImagPolarizationDirection = 0 0 0
+						}
+    FieldStrength [V/A] = 1.0063707722400115
+	IonDynamics = Yes
+	InitialTemperature [K] = 298.83075240048976
+    Populations = Yes
+}
+
+
+Options {}
+
+Analysis {
+  CalculateForces = Yes
+}
+
+ParserOptions {
+  ParserVersion = 12
+}

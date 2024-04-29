@@ -1,0 +1,109 @@
+|===============================================================================
+|
+|  DFTB+ development version (commit: 7530d3753, base: 23.1)
+|
+|  Copyright (C) 2006 - 2023  DFTB+ developers group
+|
+|===============================================================================
+|
+|  When publishing results obtained with DFTB+, please cite the following
+|  reference:
+|
+|  * DFTB+, a software package for efficient approximate density functional
+|    theory based atomistic simulations, J. Chem. Phys. 152, 124101 (2020).
+|    [doi: 10.1063/1.5143190]
+|
+|  You should also cite additional publications crediting the parametrization
+|  data you use. Please consult the documentation of the SK-files for the
+|  references.
+|
+|===============================================================================
+
+Reading input file 'dftb_in.hsd'
+Parser version: 14
+
+--------------------------------------------------------------------------------
+***  Converting input from parser version 12 to parser version 14 ...
+WARNING!
+-> Keyword renamed to 'PrintForces'.
+Path: dftbplusinput/Analysis/CalculateForces
+Line: 39-39 (File: dftb_in.hsd)
+
+***  Done.
+
+Reading SK-files:
+/Users/ayushsharma/Documents/Spring 2024/Lab Research/zrun_1/H-H.skf
+Done.
+
+
+Processed input in HSD format written to 'dftb_pin.hsd'
+
+Starting initialization...
+--------------------------------------------------------------------------------
+OpenMP threads:              10
+Chosen random seed:          620635267
+Current stacksize:           8 [Mb] (recommended: unlimited)
+WARNING!
+-> Current stacksize not set to unlimited or hard limit, which might cause
+   random crashes (e.g. segmentation faults). It is advised to unlimit the
+   stacksize by issuing 'ulimit -s unlimited' (Linux) or setting it to the 
+   hard limit by 'ulimit -s hard' (Mac) in advance.
+Mode:                        Static calculation
+Self consistent charges:     Yes
+SCC-tolerance:                 0.100000E-06
+Max. scc iterations:                    200
+Shell resolved Hubbard:      No
+Spin polarisation:           No
+Nr. of up electrons:             1.000000
+Nr. of down electrons:           1.000000
+Periodic boundaries:         No
+Electronic solver:           Relatively robust
+Mixer:                       Broyden mixer
+Mixing parameter:                  0.200000
+Maximal SCC-cycles:                     200
+Nr. of chrg. vec. in memory:            200
+Electronic temperature:              0.100000E-07 H      0.272114E-06 eV
+Initial charges:             Set automatically (system chrg:   0.000E+00)
+Included shells:             H:  s
+Extra options:
+                             Mulliken analysis
+                             Force calculation
+Force type                   original
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1    0.00000000E+00    0.00000000E+00    0.44408921E-15
+>> Charges saved for restart in charges.bin
+
+Total Energy:                       -0.6749506368 H          -18.3663 eV
+Extrapolated to 0K:                 -0.6749506368 H          -18.3663 eV
+Total Mermin free energy:           -0.6749506368 H          -18.3663 eV
+Force related energy:               -0.6749506368 H          -18.3663 eV
+
+S inverted
+
+Starting electronic dynamics...
+--------------------------------------------------------------------------------
+Step     3000  elapsed loop time:   0.803000  average time per loop   0.000268
+Step     6000  elapsed loop time:   1.626000  average time per loop   0.000271
+Step     9000  elapsed loop time:   2.569000  average time per loop   0.000285
+Step    12000  elapsed loop time:   3.319000  average time per loop   0.000277
+Step    15000  elapsed loop time:   4.100000  average time per loop   0.000273
+Step    18000  elapsed loop time:   4.839000  average time per loop   0.000269
+Step    21000  elapsed loop time:   5.634000  average time per loop   0.000268
+Step    24000  elapsed loop time:   6.505000  average time per loop   0.000271
+Step    27000  elapsed loop time:   7.251000  average time per loop   0.000269
+Step    30000  elapsed loop time:   7.981000  average time per loop   0.000266
+Dynamics finished OK!
+
+--------------------------------------------------------------------------------
+DFTB+ running times                          cpu [s]             wall clock [s]
+--------------------------------------------------------------------------------
+Post-geometry optimisation             +      10.68 (100.0%)       8.02 (100.0%)
+--------------------------------------------------------------------------------
+Missing                                +       0.00 (  0.0%)       0.00 (  0.0%)
+Total                                  =      10.68 (100.0%)       8.02 (100.0%)
+--------------------------------------------------------------------------------
